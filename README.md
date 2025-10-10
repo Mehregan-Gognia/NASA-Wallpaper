@@ -1,6 +1,6 @@
 # NASA-Wallpaper
 
-A simple project to fetch and use NASA's stunning daily images as wallpapers. This repository contains code and utilities (scripts, app, or examples) that download NASA images (e.g., APOD, EPIC) and optionally set them as the desktop background. Use this README as a starting point — update the "Installation" and "Usage" sections to match the actual language/framework in this repo.
+A simple project to fetch and use NASA's stunning daily images as wallpapers. This repository contains code and utilities that download NASA images (e.g., APOD, EPIC) and optionally set them as the desktop background.
 
 If you cloned this repository to explore or extend wallpaper automation using NASA data, this README will help you get started.
 
@@ -41,13 +41,11 @@ Requirements
 Getting a NASA API key
 ----------------------
 1. Go to https://api.nasa.gov
-2. Sign up (if needed) and generate an API key.
+2. Sign up and generate an API key.
 3. Keep the key handy — you'll add it to your environment or a config file.
 
 Installation
 ------------
-Update this section to match the repository implementation. Example instructions for two common stacks:
-
 Python (example)
 ```bash
 # create venv
@@ -78,8 +76,6 @@ DOWNLOAD_DIR=./images
 
 Usage
 -----
-Replace the commands below with those matching the repository's actual scripts.
-
 Python
 ```bash
 # Download today's APOD
@@ -108,7 +104,7 @@ curl "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&hd=true"
 
 This returns JSON describing today's picture and a URL to the image. Replace DEMO_KEY with your API key.
 
-Saving and setting wallpaper (examples)
+Saving and setting wallpaper
 --------------------------------------
 - macOS: you can use AppleScript/osascript to change wallpaper.
 - Linux (GNOME): gsettings can be used to change the background.
@@ -131,7 +127,7 @@ To keep your wallpaper updated automatically:
 Contributing
 ------------
 Contributions are welcome! Please:
-1. Open an issue to discuss major changes.
+1. Open an issue to discuss changes.
 2. Fork the repository and make your changes on a feature branch.
 3. Open a pull request describing your changes.
 
@@ -140,19 +136,12 @@ Please include:
 - Why it helps
 - How to test
 
-If you'd like a template for issues/PRs added here, say the word and I'll add one.
 
 License
 -------
-This repository does not include an explicit license file yet. Add a LICENSE (for example, MIT) if you'd like others to reuse your code. Also note that images downloaded from NASA APIs are subject to NASA's usage policies — check the API docs for attribution and reuse rules.
+This repository does not include an explicit license file yet. Also note that images downloaded from NASA APIs are subject to NASA's usage policies — check the API docs for attribution and reuse rules.
 
 Acknowledgements
 ----------------
 - NASA Open APIs — https://api.nasa.gov
 - Thanks to contributors and maintainers
-
-Notes / TODO
------------
-- Replace example commands with those matching the actual project language and scripts.
-- Add screenshots or GIF demonstrating the app in action.
-- Add CI instructions or a Dockerfile if relevant.
