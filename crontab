@@ -21,4 +21,4 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-@daily /bin/bash /home/username/nasa-wallpaper.sh
+@daily /bin/bash "/home/mehregan/Documents/NASA Wallpaper/nasa-wallpaper.sh"

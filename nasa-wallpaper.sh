@@ -2,7 +2,7 @@
 
 # --- CONFIGURATION ---
 # Replace this with your own API key from https://api.nasa.gov/
-API_KEY="YOUR_NASA_API_KEY_HERE"
+API_KEY="api_key_here"
 
 # Directory to store the wallpapers
 # The script will create this directory if it doesn't exist.
@@ -25,15 +25,15 @@ if [ -z "$API_RESPONSE" ]; then
     exit 1
 fi
 
-# Use jq to check the media type. Exit if it's not an image.
-MEDIA_TYPE=$(echo "$API_RESPONSE" | jq -r '.media_type')
+# Use Python to parse JSON instead of jq
+MEDIA_TYPE=$(echo "$API_RESPONSE" | python3 -c "import sys, json; print(json.load(sys.stdin).get('media_type', ''))")
 if [ "$MEDIA_TYPE" != "image" ]; then
     echo "Today's APOD is a $MEDIA_TYPE, not an image. Exiting."
     exit 0
 fi
 
-# Use jq to get the URL of the high-resolution image
-IMAGE_URL=$(echo "$API_RESPONSE" | jq -r '.hdurl')
+# Use Python to get the URL of the high-resolution image
+IMAGE_URL=$(echo "$API_RESPONSE" | python3 -c "import sys, json; print(json.load(sys.stdin).get('hdurl', ''))")
 echo "Image URL: $IMAGE_URL"
 
 # Get the filename from the URL
