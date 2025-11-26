@@ -21,4 +21,5 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-@daily /bin/bash "/home/mehregan/Documents/NASA Wallpaper/nasa-wallpaper.sh"
+# @daily /bin/bash /home/mehregan/Documents/NASA\ Wallpaper/nasa-wallpaper.sh
+@daily DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /bin/bash "/home/mehregan/Documents/NASA Wallpaper/nasa-wallpaper.sh" > /home/mehregan/wallpaper.log 2>&1
